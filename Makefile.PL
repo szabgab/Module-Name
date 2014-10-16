@@ -3,12 +3,12 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 my %conf = (
-    NAME         => 'Module::Name',
-    AUTHOR       => 'Foo Bar <foobar@cpan.org>',
-    VERSION_FROM => 'lib/Module/Name.pm',
-    PREREQ_PM    => {
-      'HTML::Template'    => '2.95',
-    },
+	NAME         => 'Module::Name',
+	AUTHOR       => 'Foo Bar <foobar@cpan.org>',
+	VERSION_FROM => 'lib/Module/Name.pm',
+	PREREQ_PM    => {
+		'HTML::Template'    => '2.95',
+	},
 );
 
 if (eval { ExtUtils::MakeMaker->VERSION(6.3002) }) {
@@ -24,26 +24,29 @@ if (eval { ExtUtils::MakeMaker->VERSION(6.46) }) {
 				type       => 'git',
 				url        => 'http://github.com/szabgab/Module-Name.git',
 				web        => 'http://github.com/szabgab/Module-Name',
-                license    => 'http://dev.perl.org/licenses/',
-                bugtracker => 'http://github.com/szabgab/Module-Name',
-			}
+				license    => 'http://dev.perl.org/licenses/',
+			},
+			bugtracker => {
+				web        => 'http://github.com/szabgab/Module-Name',
+			},
+			homepage   => 'http://perlmaven.com/',
 		},
-        x_contributors => [
-            'Peti Bar <petibar@cpan.org>',
-        ],
+		x_contributors => [
+			'Peti Bar <petibar@cpan.org>',
+		],
 	};
 }
 
 my %configure_requires = (
-        'ExtUtils::MakeMaker' => '6.64',
+	'ExtUtils::MakeMaker' => '6.64',
 );
 my %build_requires = ();
 my %test_requires = (
-		'Test::More'      => '1.00',
-		'Test::Exception' => '0.32',
+	'Test::More'      => '1.00',
+	'Test::Exception' => '0.32',
 
-		# standard modules:
-		'File::Temp' => 0,
+	# standard modules:
+	'File::Temp' => 0,
 );
 
 ###   merging data "standard code"
@@ -66,3 +69,4 @@ if (eval { ExtUtils::MakeMaker->VERSION(6.64) }) {
 
 
 WriteMakefile(%conf);
+
