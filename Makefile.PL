@@ -34,6 +34,8 @@ if (eval { ExtUtils::MakeMaker->VERSION(6.46) }) {
 		x_contributors => [
 			'Peti Bar <petibar@cpan.org>',
 		],
+		x_IRC => 'irc://irc.perl.org/#perl',
+		x_MailingList => 'http://lists.perl.org/list/perl-qa.html',
 	};
 }
 
