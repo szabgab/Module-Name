@@ -3,10 +3,11 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 my %conf = (
-	NAME         => 'Module::Name',
-	AUTHOR       => 'Foo Bar <foobar@cpan.org>',
-	VERSION_FROM => 'lib/Module/Name.pm',
-	PREREQ_PM    => {
+	NAME          => 'Module::Name',
+	AUTHOR        => 'Foo Bar <foobar@cpan.org>',
+	VERSION_FROM  => 'lib/Module/Name.pm',
+	ABSTRACT_FROM => 'lib/Module/Name.pm',
+	PREREQ_PM     => {
 		'HTML::Template'    => '2.95',
 	},
 );
@@ -27,7 +28,7 @@ if (eval { ExtUtils::MakeMaker->VERSION(6.46) }) {
 				license    => 'http://dev.perl.org/licenses/',
 			},
 			bugtracker => {
-				web        => 'http://github.com/szabgab/Module-Name',
+				web        => 'http://github.com/szabgab/Module-Name/issues',
 			},
 			homepage   => 'http://perlmaven.com/',
 		},
